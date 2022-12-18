@@ -604,6 +604,9 @@ body {
   border: 1px solid rgba(0, 0, 0, 0.1);
   padding: 0;
 }
+.modal_close_btn:active {
+  background-color: var(--hero__button_bgr);
+}
 /* .modal_close_btn:hover,
 .modal_close_btn:focus {
   background-color: ;
@@ -675,6 +678,7 @@ body {
   text-align: center;
   letter-spacing: 0.02em;
   color: #2e2f42;
+  margin-bottom: 16px;
 }
 
 .modal_form_comment {
@@ -697,42 +701,32 @@ body {
 }
 
 /* ---------CheckBox--------- */
-.modal_form_check {
-
-}
-.modal_form_check_dskr {
-  position: relative;
-
-  display: flex;
-  align-items: center;
-  
-}
-
-.modal_fake_checkbox {
-  position: absolute;
-  left: 0;
-  top: 0;
+.modal_form_check_dskr::before {
+  content: "";
   display: block;
   width: 16px;
   height: 16px;
-  content: "";
   border: 1.25px solid #2e2f42;
   border-radius: 2px;
   cursor: pointer;
-  margin-right: 8px;
+}
+.modal_form_check:checked + .modal_form_check_dskr::before {
+  background-image: url(/images/check-box.svg);
+  border: transparent;
+}
+.modal_form_check:focus + .modal_form_check_dskr::before {
+  outline: #4d5ae5;
 }
 
-/* .icon_policy {
-  opacity: 0;
-
-} */
-
-/* .modal_form_check_dskr:checked + .icon_policy {
-  opacity: 1;
-} */
+.modal_form_check_dskr {
+  position: relative;
+  display: flex;
+  align-items: center;
+  margin-bottom: 24px;
+}
 
 .user_police_dscr {
-  margin-left: 10px;
+  margin-left: 8px;
   font-family: "Roboto";
   font-style: normal;
   font-weight: 400;
@@ -740,4 +734,33 @@ body {
   line-height: 16px;
   letter-spacing: 0.04em;
   color: #757575;
+}
+.privacy_policy {
+  color: var(--logo__accent);
+}
+.modal_form_submit {
+  font-family: "Roboto", sans-serif;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.19;
+  letter-spacing: 0.04em;
+  background-color: var(--hero__button_bgr);
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  color: var(--hero__button_color);
+  border-radius: 4px;
+  border-color: transparent;
+  padding-top: 16px;
+  padding-bottom: 16px;
+  padding-left: 32px;
+  padding-right: 32px;
+  transition: background-color var(--transition_dur_funk),
+    box-shadow var(--transition_dur_funk);
+    width: 50%;
+    margin: 0 auto;
+}
+.modal_form_submit:hover,
+.modal_form_submit:focus {
+  background-color: #4d5ae5;
+  box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08),
+    0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08);
 }
