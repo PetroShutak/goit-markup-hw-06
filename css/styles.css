@@ -724,6 +724,7 @@ body {
 
 /* .icon_policy {
   opacity: 0;
+
 } */
 
 /* .modal_form_check_dskr:checked + .icon_policy {
@@ -731,6 +732,7 @@ body {
 } */
 
 .user_police_dscr {
+  margin-left: 10px;
   font-family: "Roboto";
   font-style: normal;
   font-weight: 400;
