@@ -755,12 +755,18 @@ body {
   padding-right: 32px;
   transition: background-color var(--transition_dur_funk),
     box-shadow var(--transition_dur_funk);
-    width: 50%;
-    margin: 0 auto;
+  width: 50%;
+  margin: 0 auto;
 }
 .modal_form_submit:hover,
 .modal_form_submit:focus {
   background-color: #4d5ae5;
   box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08),
     0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08);
+}
+/* -----------Form Footer------------ */
+.subscription_form {
+  padding-top: 100px;
+  padding-bottom: 100px;
+  margin-left: 120px;
 }
