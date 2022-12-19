@@ -712,7 +712,7 @@ body {
   cursor: pointer;
 }
 .modal_form_check:checked + .modal_form_check_dskr::before {
-  background-image: url(./check-box.svg);
+  background-image: url(../images/check-box.svg);
   border: transparent;
 }
 .modal_form_check:focus + .modal_form_check_dskr::before {
