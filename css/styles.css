@@ -625,7 +625,7 @@ body {
 .modal_form_input {
   width: 100%;
   height: 40px;
-  border: 1px solid #2e2f42;
+  border: 1px solid rgba(33, 33, 33, 0.2);
   border-radius: 4px;
   padding-left: 38px;
   transition: border-color var(--transition_dur_funk);
@@ -664,7 +664,7 @@ body {
   position: absolute;
   top: 50%;
   left: 16px;
-  color: #2e2f42;
+  fill: #2e2f42;
   transform: translate(0, -50%);
   transition: fill var(--transition_dur_funk);
 }
@@ -687,7 +687,7 @@ body {
   width: 100%;
   height: 120px;
   padding: 8px 16px;
-  border: 1px solid #2e2f42;
+  border: 1px solid rgba(33, 33, 33, 0.2);
   border-radius: 4px;
   transition: border-color var(--transition_dur_funk);
 }
@@ -712,7 +712,7 @@ body {
   cursor: pointer;
 }
 .modal_form_check:checked + .modal_form_check_dskr::before {
-  background-image: url(./check-box.svg);
+  background-image: url(../images/check-box.svg);
   border: transparent;
 }
 .modal_form_check:focus + .modal_form_check_dskr::before {
@@ -767,8 +767,6 @@ body {
 }
 /* -----------Form Footer------------ */
 .subscription_form {
-  padding-top: 100px;
-  padding-bottom: 100px;
   margin-left: 80px;
 }
 .footer_form_input {
@@ -802,20 +800,19 @@ body {
   background-color: #4d5ae5;
   border-radius: 4px;
   border-color: transparent;
-  padding-top: 8px;
-  padding-bottom: 8px;
-  padding-left: 24px;
-  padding-right: 64px;
+  padding: 8px 24px;
   height: 40px;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  transition: background-color var(--transition_dur_funk),
+    box-shadow var(--transition_dur_funk);
 }
-.link_subscr {
-  position: relative;
-}
-.footer_subscr_icon {
-  position: absolute;
-  top: 50%;
-  left: 80%;
-  transform: translate(-50%, -50%);
+.btn_subscr:hover,
+.btn_subscr:focus {
+  background-color: #4d5ae5;
+  box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08),
+    0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08);
 }
 .footer_form_input::placeholder {
   color: rgba(255, 255, 255, 0.6);
@@ -827,6 +824,8 @@ body {
   margin-top: 16px;
 }
 .footer_form_input:focus {
-  border-color: transparent;
-  outline-color: transparent;
+  /* border-color: transparent;
+  outline-color: transparent; */
+  outline: none;
+  border-color: #ffffff;
 }
